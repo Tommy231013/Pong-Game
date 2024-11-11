@@ -28,7 +28,7 @@ public class Pong extends Application {
     private double ballXSpeed = 3;
     private double ballYSpeed = 3;
     private double playerSpeed = 5;
-    private double opponentSpeed = 2.8;
+    private double opponentSpeed = 3;
 
     private int playerScore = 0;
     private int opponentScore = 0;
@@ -85,7 +85,7 @@ public class Pong extends Application {
             playerYPos += playerSpeed;
         }
 
-        if (Math.abs(ballYPos - opponentYPos) > 20) {
+        if (Math.abs(ballYPos - opponentYPos) > 15) {
             if (ballYPos > opponentYPos) {
                 opponentYPos += opponentSpeed;
             } else {
@@ -94,9 +94,9 @@ public class Pong extends Application {
         }
 
         if (ballXSpeed > 0) {
-            opponentSpeed = 2.8;
+            opponentSpeed = 3.2;
         } else {
-            opponentSpeed = 2.5;
+            opponentSpeed = 2.8;
         }
 
         ballXPos += ballXSpeed;
@@ -146,3 +146,4 @@ public class Pong extends Application {
         launch(args);
     }
 }
+
